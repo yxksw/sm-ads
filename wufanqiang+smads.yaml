@@ -77,14 +77,6 @@ proxy-groups:
 
 # 规则订阅（去广告）
 rule-providers:
-  dd-ads:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    url: "https://cdn.jsdmirror.com/gh/yxksw/sm-ads@main/rule/DD-AD-Clash-Classical.yaml"
-    path: ./ruleset/dd-ads.yaml
-
   awavenue-ads:
     type: http
     behavior: classical
@@ -104,7 +96,6 @@ rule-providers:
 # 规则
 rules:
   # 去广告规则（优先）
-  - RULE-SET,dd-ads,REJECT
   - RULE-SET,awavenue-ads,REJECT
   - RULE-SET,adblock-mihomo,REJECT
   
